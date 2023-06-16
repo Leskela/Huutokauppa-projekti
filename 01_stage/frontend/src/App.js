@@ -1,9 +1,9 @@
 import './App.css';
 import {useState,useEffect} from 'react';
-import ShoppingForm from './components/ShoppingForm';
-import ShoppingList from './components/ShoppingList';
 import HuutokauppaForm from './components/HuutokauppaForm';
 import HuutokauppaList from './components/HuutokauppaList';
+// import ShoppingForm from './components/ShoppingForm';
+// import ShoppingList from './components/ShoppingList';
 import Navbar from './components/Navbar';
 import {Routes,Route,Navigate} from 'react-router-dom';
 
@@ -32,15 +32,18 @@ function App() {
 				return;
 			}
 
-			console.log("Testi #34 urlRequest.url", urlRequest.url)
+			console.log("App #34 urlRequest.url: ", urlRequest.url)
 			//console.log("Testi #35 response.ok", response.ok)
-			console.log("Testi #36 urlRequest.action", urlRequest.action) //additem!
+			console.log("App #36 urlRequest.action: ", urlRequest.action) //additem!
 
 			const response = await fetch(urlRequest.url,urlRequest.request);
 			if(!response) {
 				console.log("No response #38.");
 				return;
 			}
+
+			console.log("App #45 response.ok: ", response.ok) //additem!
+			console.log("App #45 response: ", response) //additem!
 			if(response.ok) {
 				switch(urlRequest.action) {
 					case "getlist":
@@ -131,8 +134,8 @@ function App() {
 		<div className="App">
 			<Navbar/>
 			<Routes>	
-				<Route path="/" element={<ShoppingList list={state.list} removeItem={removeItem} editItem={editItem}/>}/>
-				<Route path="/form" element={<ShoppingForm addItem=	{addItem}/>}/>
+				{/* <Route path="/" element={<ShoppingList list={state.list} removeItem={removeItem} editItem={editItem}/>}/>
+				<Route path="/form" element={<ShoppingForm addItem=	{addItem}/>}/> */}
 				<Route path="/" element={<HuutokauppaList list={state.list} removeItem={removeItem} editItem={editItem}/>}/>
 				{/* <Route path="/HuutokauppaList" element={<HuutokauppaList addItem={addItem}/>}/> */}
 				<Route path="/HuutokauppaForm" element={<HuutokauppaForm addItem={addItem}/>}/>

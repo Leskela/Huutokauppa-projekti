@@ -4,13 +4,13 @@ import RemoveRow from './RemoveRow';
 import EditRow from './EditRow';
 
 const ShoppingList = (props) => {
-    console.log("ShoppingList #7 props=",props)
+    console.log("SL #7 props=",props)
     const [state,setState] = useState({
         removeIndex:-1,
         editIndex:-1
     })
 
-    console.log("SL 13 props.list=",props.list)
+    console.log("SL #13 props.list=",props.list)
 
     const changeMode  = (mode,index) => {
         if(mode === "remove") {
@@ -43,8 +43,8 @@ const ShoppingList = (props) => {
         changeMode("cancel");
     }
 
-    console.log("ShoppingList #44 editItem=",editItem)
-    console.log("###45 props.list=",props.list)
+    console.log("SL #44 editItem=",editItem)
+    console.log("SL #45 props.list=",props.list)
     let items = props.list.map((item,index) => {
         if(index === state.removeIndex) {
             return (

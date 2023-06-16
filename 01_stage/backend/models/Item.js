@@ -10,7 +10,7 @@ let Schema = mongoose.Schema({
     auction_endtime:String,
     auction_desription:String,
     auction_adress:String,
-    auction_phone:String
+    auction_phone:Number
 })
 
 module.exports = mongoose.model("Item",Schema);

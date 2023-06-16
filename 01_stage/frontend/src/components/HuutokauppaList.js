@@ -32,7 +32,7 @@ const HuutokauppaList = (props) => {
         }
     }
 
-    console.log("###34 changeMode=",changeMode)
+    console.log("HL ###34 changeMode=",changeMode)
     const removeItem = (id) => {
         props.removeItem(id);
         changeMode("cancel");
@@ -43,10 +43,10 @@ const HuutokauppaList = (props) => {
         changeMode("cancel");
     }
 
-   console.log("###45 editItem=",editItem)
-   console.log("###46 props=",props)
+   console.log("HL ###45 editItem=",editItem)
+   console.log("HL ###46 props=",props)
     let items = props.list.map((item,index) => {
-         console.log("###47 state.removeIndex=",state.removeIndex)
+         console.log("HL ###47 state.removeIndex=",state.removeIndex)
         
         if(index === state.removeIndex) {
             return (
@@ -64,7 +64,7 @@ const HuutokauppaList = (props) => {
         )
     })
 
-   console.log("###63 items=",items)
+   console.log("HL ###63 items=",items)
 
     //Otsiko ja listan!
     return (
@@ -84,7 +84,7 @@ const HuutokauppaList = (props) => {
                     <th>Edit</th>
                 </tr>
             </thead>
-            {/*  Listan tulostus */}
+            {/* Listan tulostus */}
             <tbody>
                 {items}
             </tbody>

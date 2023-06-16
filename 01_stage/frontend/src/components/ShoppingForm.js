@@ -1,6 +1,10 @@
 import {useState} from 'react';
 
 const ShoppingForm = (props) => {
+	console.log("SF ###4 props=",props)
+	console.log("SF ###5 props.addItem=",props.addItem)
+	console.log("SF ###4 props.list=",props.list)
+	
 	const [state,setState] = useState({
 		type:"",
 		count:0,
@@ -39,7 +43,8 @@ const ShoppingForm = (props) => {
 			// auction_adress:"",
 			// auction_phone:""		
 			})
-			
+		console.log("SF ###42 props.list=",props.list)
+		console.log("SF ###43 props=",props)
 	}
 	
 	return(

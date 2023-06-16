@@ -18,8 +18,8 @@ const HuutokauppaForm = (props) => {
 	
 	//Lisää joka painaluksella aron event.target.name!
 	const onChange = (event) => {
-		console.log("###15", event.target.name)
-		console.log("###16", event.target.value)
+		console.log("HF ###15", event.target.name)
+		console.log("HF ###16", event.target.value)
 
 		setState((state) => {
 			return {

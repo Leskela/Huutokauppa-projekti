@@ -6,9 +6,12 @@ const Row = (props) => {
             <td>{props.item.type}</td>
             <td>{props.item.count}</td>
             <td>{props.item.price}</td>
-			<td>{props.item.auction_name}</td>
-			<td>{props.item.auction_starttime}</td>
-			<td>{props.item.auction_endtime}</td>
+			<td>{props.item.auction_name}##</td>
+			<td>{props.item.auction_starttime}¤¤</td>
+			<td>{props.item.auction_endtime}¤¤</td>
+			<td>{props.item.auction_desription}¤¤</td>
+			<td>{props.item.auction_adress}¤¤</td>
+			<td>{props.item.auction_phone}¤¤</td>
            <td><button className="btn btn-danger"
                 onClick={() => props.changeMode("remove",props.index)}
             >Remove</button></td>
